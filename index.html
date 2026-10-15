@@ -1,0 +1,42 @@
+ <!DOCTYPE html>
+
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>multimedia
+    </title>
+</head>
+<body>
+
+<img src="https://images.pexels.com/photos/14713024/pexels-photo-14713024.jpeg" alt="descripcion" width="70%" height="50%">
+<video src="https://www.pexels.com/es-es/download/video/36306842/" autoplay loop controls alt="35" width="50%" height="50%"></video>
+<audio id="musicaFondo" src="c:\Users\EstudianteUsuario\hasta-que-el-cuerpo-aguante-lyric-video-oficial--finisterra.mp3" loop></audio>
+<button id="botonMusica">▶ Reproducir música</button>
+
+<style>
+    img
+    {
+max-width: 50%;
+height: 50%;
+border-radius: 15%;
+    }
+
+    video
+    {
+max-width: 50%;
+height: 50%;
+border-radius: 20%;
+    }
+</style>
+<script>
+    const audio = document.getElementById('musicaFondo');
+const boton = document.getElementById('botonMusica');
+boton.addEventListener('click', () => {
+if (audio.paused) { audio.play(); boton.textContent = '⏸ Pausar música'; }
+else { audio.pause(); boton.textContent = '▶ Reproducir música'; }
+});
+</script>
+</body>
+</html>
